@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WebVR Photosphere Viewer</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes"> <!-- Fullscreen Landscape on iOS -->
+
+    <meta name="abstract" content="" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="copyright" content="" />
+    <meta name="robots" content="follow, index" />
+
+    <meta property="og:site_name" content="" />
+    <meta property="og:image:secure_url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:title" content="WebVR Photosphere Viewer" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+
+    <script src="js/aframe.min.js"></script>
+    <script src="js/components/isvr_photosphere_menu.js"></script>
+    <script src="js/components/isvr_photosphere_menu_thumb.js"></script>
+    <script src="js/components/isvr_photosphere_menu_navigation.js"></script>
+</head>
+<body>
+    <a-scene>
+        <a-box color="#FFF" width="4" height="10" depth="2"
+         position="-10 2 -5" rotation="0 0 45" scale="2 0.5 3"
+         src="texture.png">
+         <a-animation attribute="rotation" repeat="indefinite" to="0 360 0"></a-animation>
+        </a-box>
+
+        <!-- New lights. -->
+  <a-light type="spot" color="#333" position="-20 0 0" look-at="a-box"></a-light>
+  <a-light type="point" color="#AAA" position="0 5 0"></a-light>
+  <!-- Background. -->
+  <a-sky color="#73F7DD"></a-sky>
+  <a-camera position="0 1.8 0">
+    <a-cursor color="#2E3A87">
+  </a-camera>
+</a-scene>
+</body>
+</html>
